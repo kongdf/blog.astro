@@ -1,7 +1,7 @@
 ---
 title: 前端笔记-cesium
 description: cesium组件库
-image: https://s21.ax1x.com/2025/03/27/pEDxjnP.png 
+image: https://img1.baidu.com/it/u=2983287098,2036688156&fm=253&fmt=auto&app=138&f=PNG
 published: 2025-03-27
 tags: [前端]
 category: 学习笔记

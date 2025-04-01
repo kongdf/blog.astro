@@ -1,7 +1,7 @@
 ---
 title: 前端笔记-组件库
 description: JS组件库
-image: https://s21.ax1x.com/2025/03/27/pEDxjnP.png 
+image: https://t14.baidu.com/it/u=1203934598,3860064025&fm=225&app=113&f=PNG?w=1920&h=1200&s=7C65B0569E21189E77B6DA890300B09D
 published: 2025-03-27
 tags: [前端]
 category: 学习笔记

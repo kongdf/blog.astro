@@ -1,12 +1,12 @@
 ---
 title: git使用笔记
 description: git备忘录
-image: https://s21.ax1x.com/2025/03/27/pEDxjnP.png 
+image: https://git-scm.com/images/logo@2x.png
 published: 2025-03-27
 tags: [Git]
 category: 学习笔记
 draft: false
-top: true
+top: false
 ---
 
 ## 记一次coding代码提交时推送github

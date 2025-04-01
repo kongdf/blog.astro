@@ -1,7 +1,7 @@
 ---
 title: 软件仓 
 description: 软件下载
-image: https://s21.ax1x.com/2025/03/27/pEDxjnP.png 
+image: https://s21.ax1x.com/2025/04/01/pEyMORH.png
 published: 2025-03-27
 tags: [资源]
 category: 玩机指北

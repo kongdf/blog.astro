@@ -1,7 +1,7 @@
 ---
 title: 前端笔记-Vue组件库
 description: Vue组件库
-image: https://s21.ax1x.com/2025/03/27/pEDxjnP.png 
+image: https://pic.rmb.bdstatic.com/bjh/240111/dump/d121fc470d725fa220872685716777a9.jpeg
 published: 2025-03-27
 tags: [前端]
 category: 学习笔记
