@@ -8,3 +8,9 @@ category: 学习笔记
 draft: false
  
 ---
+
+## 在线文档
+
+* Rust语言圣经  <https://course.rs/>
+* Rust 程序设计语言 <https://kaisery.github.io/trpl-zh-cn/title-page.html>
+* Rust文档网 <https://rustwiki.org/>
