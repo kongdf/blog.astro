@@ -68,6 +68,90 @@ value : `https://用户名:token@github.com/用户名/仓库名.git`
 
 搞定~
 
+## coding持续部署高版本node
+
+```Groovy
+pipeline {
+  agent any
+  stages {
+    stage('检出') {
+      steps {
+        checkout([$class: 'GitSCM',
+        branches: [[name: GIT_BUILD_REF]],
+        userRemoteConfigs: [[
+          url: GIT_REPO_URL,
+          credentialsId: CREDENTIALS_ID
+        ]]])
+      }
+    }
+    stage('安装node&依赖') {
+      agent {
+        docker {
+          reuseNode 'true'
+          registryUrl 'https://coding-public-docker.pkg.coding.net'
+          image 'public/docker/nodejs:23-2025.02'
+        }
+
+      }
+      steps { 
+        sh 'npm install -g pnpm'
+        sh 'pnpm install'  
+        sh 'pnpm build' 
+      }
+    }
+ 
+    stage('压缩dist') {
+      steps {
+        echo '压缩中...'
+        sh 'tar -zcf dist.tar.gz dist/'
+        echo '压缩完成.'
+        sh 'ls'
+      }
+    }
+    stage('上传dist') {
+      steps {
+        echo '开始上传'
+        codingArtifactsGeneric(files: 'dist.tar.gz', repoName: 'blog', version: '${env.GIT_BUILD_REF}')
+      }
+    }
+    stage('部署至服务器') {
+      steps {
+        script {
+          def remote= [:]
+          remote.name = "my-remote-server"
+          remote.host = "1.1.1.1"
+          remote.allowAnyHosts = true
+          // 服务器远程地址
+          def remotePath = "/opt/1panel/apps/openresty/openresty/www/sites/blog/index"
+
+          // SSH 登陆用户名
+          remote.user = "root"
+          // SSH 登陆密码
+          remote.password = "xxxx"
+          stage("执行ssh脚本") {
+            echo '开始执行脚本'
+
+            sshCommand remote: remote, sudo: true, command: "rm -rf ${remotePath}/dist"
+
+            // SSH 上传文件到远端服务器
+            sshPut remote: remote, from: './dist.tar.gz', into:remotePath
+            // 解压缩
+
+            sshCommand remote: remote, command: "tar -zxf ${remotePath}/dist.tar.gz -C ${remotePath}/"
+            // 删除压缩文件
+            sshCommand remote: remote, sudo: true, command: "rm -f ${remotePath}/*.tar.gz"
+
+            echo '脚本执行结束'
+          }
+        }
+
+      }
+    }
+  }
+}
+
+```
+
 ## 删除长时间没更新的分支
 
 新建个.sh文件
