@@ -15,4 +15,9 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
     name: i18n(I18nKey.archive),
     url: '/archive/',
   },
+  [LinkPreset.Telegram]: {
+    name: i18n(I18nKey.telegram),
+    url: '/telegram/',
+  },
+
 }

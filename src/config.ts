@@ -50,6 +50,7 @@ export const navBarConfig: NavBarConfig = {
       url: '/archive/category/学习笔记/',     // Internal links should not include the base path, as it is automatically added
       external: false,                               // Show an external link icon and will open in a new tab
     },
+    LinkPreset.Telegram,
     LinkPreset.About,
 
     // LinkPreset.Archive,

@@ -1,9 +1,10 @@
 enum I18nKey {
+
   home = 'home',
   about = 'about',
   archive = 'archive',
   search = 'search',
-
+  telegram = 'telegram',
   tags = 'tags',
   categories = 'categories',
   recentPosts = 'recentPosts',
