@@ -11,8 +11,7 @@ import { url } from '../utils/url-utils'
 const className = Astro.props.class
 
 let links: NavBarLink[] = navBarConfig.links.map(
-  (item: NavBarLink | LinkPreset): NavBarLink => {
-    console.log(item)
+  (item: NavBarLink | LinkPreset): NavBarLink => { 
     if (typeof item === 'number') {
       return LinkPresets[item]
     }
