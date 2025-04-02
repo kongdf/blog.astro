@@ -77,7 +77,13 @@ export const profileConfig: ProfileConfig = {
       name: 'GitHub',
       icon: 'fa6-brands:github',
       url: 'https://github.com/kongdf',
+    },
+    {
+      name: 'RSS',
+      icon: 'material-symbols:rss-feed-rounded',
+      url: '/rss.xml',
     }
+
     // , {
     //   name: '技术博客',
     //   icon: 'logos:blogger',

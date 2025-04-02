@@ -2,6 +2,14 @@
   <h1><img style="display:inline-block;" src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
 
   95天枰男
+
+## 本站
+
+  博客使用的框架[astro](https://astro.build/)以及主题[Fuwari](https://github.com/saicaca/fuwari)
+
+  ::github{repo="withastro/astro"}
+  ::github{repo="saicaca/fuwari"}
+
 <!-- - :orange_book: 热爱互联网的一切;
 - :hammer:  JS/Rust.
 - :video_game: 塞尔达&&哈迪斯.

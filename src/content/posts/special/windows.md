@@ -54,6 +54,12 @@ draft: false
 
 ::github{repo="zbezj/HEU_KMS_Activator"}
 
+### 优化工具
+
+#### optimizer
+
+::github{repo="hellzerg/optimizer"}
+
 ### 软件卸载
 
 #### GeekUninstaller
